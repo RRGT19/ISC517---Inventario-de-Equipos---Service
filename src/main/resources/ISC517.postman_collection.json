@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "899a3c6e-0bc6-4f32-86c1-a53636f2d4c8",
+		"name": "ISC517",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "2. Inventario de Equipo – Spring Boot",
+			"item": [
+				{
+					"name": "Clients",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/clients/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"clients",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"identification\": \"00199887710\",\n\t\"name\": \"Robert Gomez\",\n\t\"phone\": \"8293334444\",\n\t\"photo\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Family",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Procesadores\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/families",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/families/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"families",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/families",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SubFamily",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Intel\",\n\t\"family\": {\n        \"id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/subfamilies",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"subfamilies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/subfamilies/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"subfamilies",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/subfamilies",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"subfamilies"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Equipments",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"i7\",\n\t\"stock\": 10,\n\t\"priceByDay\": 10.12,\n\t\"subFamily\": {\n        \"id\": 1\n    },\n\t\"photo\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/equipments",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"i7\",\n    \"stock\": 12,\n    \"priceByDay\": 10.12,\n    \"subFamily\": {\n        \"id\": 1,\n        \"name\": \"Intel\"\n    },\n    \"photo\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/equipments",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/equipments/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"equipments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/equipments",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/equipments/2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"equipments",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Rental",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"client\": {\n        \"id\": 1\n    },\n    \"dateOfReturn\": \"2020-06-25\",\n    \"rentedEquipments\": [\n        {\n            \"equipment\": {\n                \"id\": 1\n            }\n        },\n        {\n            \"equipment\": {\n                \"id\": 2\n            }\n        },\n        {\n            \"equipment\": {\n                \"id\": 3\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/rentals",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"rentals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/rentals/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"rentals",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/rentals",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"rentals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/rentals/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"rentals",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deliver Equipment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/rentals/deliverEquipment/1/1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"rentals",
+										"deliverEquipment",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Pending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/rentals/findAllPending",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"rentals",
+										"findAllPending"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"prueba\",\n    \"password\": \"prueba\",\n    \"name\": \"Jose\",\n    \"lastName\": \"Perez\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/users/create",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"users",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/users/login",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/users",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6ca65f20-7957-4ff9-837e-b2e95edd1e22",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "24f1adb4-2c26-4e13-8b4b-51073af48cba",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "810ec889-d80a-4796-88e2-fcd9159431e6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bffe2303-7fa7-42b8-9011-20c3f107e26c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "79f22dda-4f1b-4caa-8dc2-4ede094124b7",
+			"key": "API_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
